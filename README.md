@@ -24,4 +24,3 @@ The OpenSource alternative to many parts of RedPower 2 by Eloraam.
 
 	#### Images
 	Every image in this repository was made by tweaking images provided by Mojang to fit the various needs of the mod.  No Image within this repository was taken and/or modified from RedPower 2 by Eloraam.
-		
