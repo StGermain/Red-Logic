@@ -1,5 +1,10 @@
 package rsi.common;
 
+import rsi.common.blocks.blockBasalt;
+import rsi.common.blocks.blockBasaltBricks;
+import rsi.common.blocks.blockBasaltCobble;
+import rsi.common.blocks.blockMarble;
+import rsi.common.blocks.blockMarbleBricks;
 import net.minecraft.src.Block;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
