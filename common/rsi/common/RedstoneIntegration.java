@@ -16,6 +16,8 @@ public class RedstoneIntegration {
 	
 	public static Block basalt, basaltcobble, basaltbricks, marble, marblebricks;
 	
+	public static VolcanoGenerator worldGen = new VolcanoGenerator();
+	
 	@SidedProxy(clientSide="rsi.client.ClientProxy", serverSide="rsi.common.CommonProxy")
 	public static CommonProxy proxy;
 	
@@ -50,5 +52,7 @@ public class RedstoneIntegration {
 			.setResistance(50);
 		GameRegistry.registerBlock(marblebricks);
 		LanguageRegistry.addName(marblebricks, "Marble");
+		
+		GameRegistry.registerWorldGenerator(worldGen);
 	}
 }
