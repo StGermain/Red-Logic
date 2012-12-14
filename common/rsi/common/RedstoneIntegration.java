@@ -9,8 +9,8 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = "StGermain_RedstoneIntegration", name = "Redstone Integration", version = "0.0.0 Pre-Alpha")
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@Mod(modid = "StGermain_RedstoneIntegration", name = "Redstone Integration", version = "0.0.0.1")
+@NetworkMod(clientSideRequired = true, serverSideRequired = true)
 
 public class RedstoneIntegration {
 	
