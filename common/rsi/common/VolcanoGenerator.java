@@ -14,16 +14,26 @@ public class VolcanoGenerator implements IWorldGenerator {
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 				IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-		BiomeGenBase b = world.getBiomeGenForCoords(chunkX, chunkZ);
+		BiomeGenBase b = world.getBiomeGenForCoords(chunkX*16, chunkZ*16);
+		int randDefault = -1;
+		int yHeightBase = 0;
 		if(b.biomeName.equals("Ocean")) {
-			Random randGenny = new Random();
-			int yHeight = 80 - randGenny.nextInt(20);
+			yHeightBase = 40; 
+			randDefault = 20;
+		} else if(b.biomeName.equals("Ice Mountains")||b.biomeName.equals("Extreme Hills")) {
+			yHeightBase = 130;
+			randDefault = 30;
+		}
+		Random randGenny = new Random();
+		int randChance = randGenny.nextInt(randDefault);
+		if(randChance < 1 && randChance > 0) {
+			int yHeight = yHeightBase - randGenny.nextInt(20);
 			int yBase = 10 + randGenny.nextInt(20);
 			while(yHeight > yBase) {
 				world.setBlock(chunkX*16 + 8, yHeight, chunkZ*16 + 8, Block.lavaStill.blockID);
 				yHeight-=1;
 			}
-        }
+		}
 	}
 	
 }
