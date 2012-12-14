@@ -12,9 +12,12 @@ Base off vanilla repeater, use as learning curve.
 Yeah... We will get there when we get there.
 ### Impliment Glaze
 Item used in the making of slabs (the base of the gates).
-Will probably be made with slime balls + water + heat (smelting).
+Will probably be made with slime balls + iron in a brewstand.
+### Impliment Formable Redstone
+A thick goo-y redstone material that can be used in the formation of redstone wires on slabs
+Will probably bemade with redstone + iron in a brewstand.
 ### Impliment Recipies
-Uses On-Off wire + glazed slabs (tbd)
+Uses On-Off wire + glazed slabs + Forable Redstone (tbd)
 ### Impliment Marble and Basalt
 Use metadata blocks to allow the (completly visual) use of marble and basalt in the creation of slabs.
 
