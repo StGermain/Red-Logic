@@ -15,10 +15,13 @@ public class VolcanoGenerator implements IWorldGenerator {
 				IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
 		BiomeGenBase b = world.getBiomeGenForCoords(chunkX, chunkZ);
 		if(b.biomeName.equals("Plains")||b.biomeName.equals("Extreme Hills")) {
-			world.setBlock(chunkX*16 + random.nextInt(16), 100, chunkZ*16 + random.nextInt(16), 1552);
+			world.setBlock(chunkX+8, 80, chunkZ+7, 1552);
+			world.setBlock(chunkX+7, 80, chunkZ+8, 1552);
+			world.setBlock(chunkX+8, 80, chunkZ+8, 1552);
+			world.setBlock(chunkX+7, 80, chunkZ+7, 1552);
 		}
 		if(b.biomeName.equals("Ocean")) {
-			world.setBlock(chunkX*16 + random.nextInt(16), 90, chunkZ*16 + random.nextInt(16), 1552);
+			world.setBlock(chunkX+8, 80, chunkZ+8, 1552);
         }
 	}
 	
