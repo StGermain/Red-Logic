@@ -26,7 +26,7 @@ Use metadata blocks to allow the (completly visual) use of marble and basalt in 
 Impliment Basalt, Basalt Cobble, Basalt Bricks, Marble, and Marble Bricks
 ### Texture Blocks (Done)
 Make non-RP2/Vanilla textures for blocks.
-### Impliment World Gen
+### Impliment World Gen (In Progress: See EQUATIONS.md)
 Generate Basalt around lava-gen (lakes and underground pools).
 Generate Marble in levels 15-40 in slate-form (off-set horizontal discs).
 Generate undergroud water-pools ~the same size as under ground lava pools, generate marble around it.
