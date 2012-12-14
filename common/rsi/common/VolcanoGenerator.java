@@ -26,7 +26,7 @@ public class VolcanoGenerator implements IWorldGenerator {
 		}
 		Random randGenny = new Random();
 		int randChance = randGenny.nextInt(randDefault); //check if it generates
-		if(randChance < 1 && randChance > 0) {
+		if(randChance < 1 && randChance > -1) {
 			int yHeight = yHeightBase - randGenny.nextInt(20);
 			int yBase = 10 + randGenny.nextInt(20);
 			while(yHeight > yBase) {
