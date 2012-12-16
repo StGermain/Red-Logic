@@ -14,13 +14,13 @@ public class BlockMarble extends Block
     
     public String getTextureFile()
     {
-		return "/rsi/gfx/blocks/blocks.png";
+		return "/rsi/resources/rsi/gfx/blocks/blocks.png";
     }
 
     public void getSubBlocks(int blockID, CreativeTabs tab, List blockList)
     {
-        blockList.add(new ItemStack(blockID, 1, 0);
-        blockList.add(new ItemStack(blockID, 1, 1);
+        blockList.add(new ItemStack(blockID, 1, 0));
+        blockList.add(new ItemStack(blockID, 1, 1));
     }
 
     public int idDropped(int meta, Random random, int fortune)

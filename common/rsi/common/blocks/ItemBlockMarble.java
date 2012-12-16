@@ -1,12 +1,12 @@
 package rsi.common.blocks;
 
-import net.minecraft.src;
+import net.minecraft.src.*;
 
 public class ItemBlockMarble extends ItemBlock
 {
     public ItemBlockMarble(int itemID)
     {
-        super(itemID);
+        super(itemID-256);
         setHasSubtypes(true);
     }
 

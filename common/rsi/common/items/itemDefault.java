@@ -12,7 +12,7 @@ public class itemDefault extends Item {
 	}
 	
 	public String getTextureFile(){
-		return "/rsi/gfx/items/items.png";
+		return "/rsi/resources/rsi/gfx/items/items.png";
 	}
 
 }
