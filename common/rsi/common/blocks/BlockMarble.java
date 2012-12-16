@@ -3,9 +3,9 @@ package rsi.common.blocks;
 import java.util.*;
 import net.minecraft.src.*;
 
-public class BlockBasalt extends Block
+public class BlockMarble extends Block
 {
-    public BlockBasalt(int blockID)
+    public BlockMarble(int blockID)
     {
         super(blockID, 0, Material.rock);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -21,7 +21,6 @@ public class BlockBasalt extends Block
     {
         blockList.add(new ItemStack(blockID, 1, 0);
         blockList.add(new ItemStack(blockID, 1, 1);
-        blockList.add(new ItemStack(blockID, 1, 2);
     }
 
     public int idDropped(int meta, Random random, int fortune)
@@ -33,22 +32,15 @@ public class BlockBasalt extends Block
     {
         switch (meta)
         {
-            case 0: return 1;
-            case 1: return 0;
-            case 2: return 2;
+            case 0: return 3;
+            case 1: return 4;
             default: return 0;
         }
     }
 
     public int damageDropped(int meta)
     {
-        switch (meta)
-        {
-            case 0: return 1;
-            case 1: return 1;
-            case 2: return 2;
-            default: return 0;
-        }
+        return meta;
     }
 
     public int idPicked(World world, int x, int y, int z)
