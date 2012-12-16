@@ -1,10 +1,9 @@
 package rsi.common;
 
-import rsi.common.blocks.blockBasalt;
-import rsi.common.blocks.blockBasaltBricks;
-import rsi.common.blocks.blockBasaltCobble;
-import rsi.common.blocks.blockMarble;
-import rsi.common.blocks.blockMarbleBricks;
+import rsi.common.blocks.BlockBasalt;
+import rsi.common.blocks.BlockMarble;
+import rsi.common.blocks.ItemBlockBasalt;
+import rsi.common.blocks.ItemBlockMarble;
 import rsi.common.items.itemDefault;
 import net.minecraft.src.Block;
 import net.minecraft.src.Item;
@@ -21,8 +20,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class RedstoneIntegration {
 	
-	public static Block basalt, basaltcobble, basaltbricks, marble, marblebricks, repeater, timer, counter;
+	public static Block basalt, marble, repeater, timer, counter;
 	public static Item glaze, formablers;
+	
+	public static int basaltID = 1551;
+	public static int marbleID = 1552;
 	
 	public static VolcanoGenerator worldGen = new VolcanoGenerator();
 	
@@ -31,36 +33,19 @@ public class RedstoneIntegration {
 	
 	@Init
 	public void load(FMLInitializationEvent event) {
-		basaltcobble = new blockBasaltCobble(1551, 0)
-			.setBlockName("stg_basaltcobble")
-			.setResistance(4500);
-		GameRegistry.registerBlock(basaltcobble);
-		LanguageRegistry.addName(basaltcobble, "Basalt Cobble");
+		basalt = new BlockBasalt(basaltID, 0).setHardness(5.0F).setResistance(4500.0F).setBlockName("basalt");
+		marble = new BlockMarble(marbleID, 0).setHardness(3.0F).setResistance(50.0F).setBlockName("marble");
 		
-		basalt = new blockBasalt(1552, 1)
-			.setBlockName("stg_basalt")
-			.setResistance(4500);
-		GameRegistry.registerBlock(basalt);
-		LanguageRegistry.addName(basalt, "Basalt");
+		Item.itemsList[basaltID] = new ItemBlockBasalt(basaltID).setItemName("basalt");
+		Item.itemsList[marbleID] = new ItemBlockMarble(marbleID).setItemName("marble");
 		
-		basaltbricks = new blockBasaltBricks(1553, 2)
-			.setBlockName("stg_basaltbricks")
-			.setResistance(4500);
-		GameRegistry.registerBlock(basaltbricks);
-		LanguageRegistry.addName(basaltbricks, "Basalt Bricks");
+		LanguageRegistry.instance().addStringLocalization("tile.basalt.basalt.name", "Basalt");
+		LanguageRegistry.instance().addStringLocalization("tile.basalt.cobble.name", "Basalt Cobble");
+		LanguageRegistry.instance().addStringLocalization("tile.basalt.bricks.name", "Basalt Bricks");
 		
-		marble = new blockMarble(1554, 3)
-			.setBlockName("stg_marble")
-			.setResistance(50);
-		GameRegistry.registerBlock(marble);
-		LanguageRegistry.addName(marble, "Marble");
-		
-		marblebricks = new blockMarbleBricks(1555, 4)
-			.setBlockName("stg_marblebricks")
-			.setResistance(50);
-		GameRegistry.registerBlock(marblebricks);
-		LanguageRegistry.addName(marblebricks, "Marble");
-		
+		LanguageRegistry.instance().addStringLocalization("tile.marble.marble.name", "Marble");
+		LanguageRegistry.instance().addStringLocalization("tile.marble.bricks.name", "Marble Bricks");
+
 		glaze = new itemDefault(4099)
 			.setItemName("stg_glaze")
 			.setIconIndex(1);
