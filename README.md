@@ -1,5 +1,6 @@
 # Redstone Integration
 The OpenSource alternative to many parts of RedPower 2 by Eloraam.
+(Devs: "common" represents the common folder in MCP)
 
 ## Blocks
 ### WorldGen
