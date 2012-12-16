@@ -1,19 +1,47 @@
 package rsi.common.blocks;
 
-import java.util.Random;
+import java.util.*;
+import net.minecraft.src.*;
 
-import net.minecraft.src.Block;
-import net.minecraft.src.CreativeTabs;
-import net.minecraft.src.Material;
-import rsi.common.blocks.blockDefault;
+public class BlockBasalt extends Block
+{
+    public BlockBasalt(int blockID)
+    {
+        super(blockID, 0, Material.rock);
+        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setRequiresSelfNotify();
+    }
+    
+    public String getTextureFile()
+    {
+        return "";
+    }
 
-public class blockBasalt extends blockDefault {
-	public blockBasalt(int id, int texture) {
-		super(id, texture);
-	}
+    public void getSubBlocks(int blockID, CreativeTabs tab, List blockList)
+    {
+        blockList.add(new ItemStack(blockID, 1, 0);
+        blockList.add(new ItemStack(blockID, 1, 1);
+        blockList.add(new ItemStack(blockID, 1, 2);
+    }
 
-	@Override
-	public int idDropped(int par1, Random par2Random, int par3) {
-		return 1551;
-	}
+    public int idDropped(int meta, Random random, int fortune)
+    {
+        return this.blockID;
+    }
+
+    public int damageDropped(int meta)
+    {
+        switch (meta)
+        {
+            case 0: return 1;
+            case 1: return 1;
+            case 2: return 2;
+            default: return 0;
+        }
+    }
+
+    public int idPicked(World world, int x, int y, int z)
+    {
+        return this.blockID;
+    }
 }
