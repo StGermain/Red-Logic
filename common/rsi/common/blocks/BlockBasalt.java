@@ -28,6 +28,16 @@ public class BlockBasalt extends Block
     {
         return this.blockID;
     }
+    
+    public int getBlockTextureFromSideAndMetadata(int side, int meta)
+    {
+        switch (meta)
+        {
+            case 0: return 1;
+            case 1: return 0;
+            case 2: return 2;
+        }
+    }
 
     public int damageDropped(int meta)
     {
