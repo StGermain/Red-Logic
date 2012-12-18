@@ -1,4 +1,4 @@
-package rsi.common.gates;
+package redlogic.common.gates;
 
 import net.minecraft.src.BlockDirectional;
 import net.minecraft.src.Material;

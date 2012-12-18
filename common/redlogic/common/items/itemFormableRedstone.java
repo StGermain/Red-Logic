@@ -1,4 +1,4 @@
-package rsi.common.items;
+package redlogic.common.items;
 
 public class itemFormableRedstone {
 

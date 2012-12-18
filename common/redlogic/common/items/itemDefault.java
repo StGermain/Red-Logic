@@ -1,4 +1,4 @@
-package rsi.common.items;
+package redlogic.common.items;
 
 import net.minecraft.src.CreativeTabs;
 import net.minecraft.src.Item;
@@ -12,7 +12,7 @@ public class itemDefault extends Item {
 	}
 	
 	public String getTextureFile(){
-		return "/rsi/gfx/items/items.png";
+		return "/redlogic/gfx/items/items.png";
 	}
 
 }

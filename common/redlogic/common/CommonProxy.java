@@ -1,4 +1,4 @@
-package rsi.common;
+package redlogic.common;
 
 public class CommonProxy {
 
